@@ -5,6 +5,7 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const chatGetting = require("./mvvm/chat_url");
 const dbConfig = require("./dbConfig");
+const { userDbName } = require("./mvvm/chat_contorller");
 const io = new Server(server);
 require("dotenv").config();
 app.use(express.json());
@@ -13,7 +14,6 @@ PORT = process.env.port || 4000;
 
 const API_VERSION = "/api/v1/";
 
-const userDbName = "chat_history";
 
 app.use(`${API_VERSION}`, chatGetting);
 

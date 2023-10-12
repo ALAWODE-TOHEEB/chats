@@ -57,5 +57,5 @@ const createPropoertyDetails = async function (req, res) {
   };
 
 module.exports={
-    registerChat,createPropoertyDetails
+    registerChat,createPropoertyDetails,userDbName
 }
